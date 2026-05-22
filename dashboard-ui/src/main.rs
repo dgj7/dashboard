@@ -5,8 +5,8 @@ use crate::hello_template::HelloTemplate;
 pub mod hello_template;
 
 #[get("/<name>")]
-fn hello(name: &'_ str) -> HelloTemplate<'_> {
-    HelloTemplate { name }
+fn hello(name: &str) -> HelloTemplate {
+    HelloTemplate { name: name.parse().unwrap() }
 }
 
 #[launch]

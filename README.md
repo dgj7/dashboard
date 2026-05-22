@@ -23,10 +23,10 @@ Display a simple web ui containing status of all applications.
 
 Frameworks used:
 * rocket: web service support
-* askama: web templates
+* [askama](https://askama.rs/en/stable/introduction.html): web templates
 
 Exposed services:
-* `cargo run --bin dashboard-ui`  →  http://127.0.0.1:8000/shrek
+* `./run.sh`  →  http://127.0.0.1:8000/shrek
 
 ---
 Witty phrase goes here
