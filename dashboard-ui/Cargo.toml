@@ -1,7 +1,9 @@
 [package]
 name = "dashboard-ui"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2024"
 
 [dependencies]
 common = { path = "../common" }
+askama = "0.16.0"
+rocket = "0.5.1"

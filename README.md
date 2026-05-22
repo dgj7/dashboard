@@ -21,8 +21,12 @@ Probably will use Rocket.
 ### User Interface
 Display a simple web ui containing status of all applications.
 
-Implementation options:
-* askama-rs: thymeleaf like template framework
+Frameworks used:
+* rocket: web service support
+* askama: web templates
+
+Exposed services:
+* `cargo run --bin dashboard-ui`  →  http://127.0.0.1:8000/shrek
 
 ---
 Witty phrase goes here

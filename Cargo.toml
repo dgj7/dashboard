@@ -2,5 +2,8 @@
 resolver="2"
 
 members=[
-    "common", "dashboard-data", "dashboard-rest", "dashboard-ui",
+    "common",
+    "dashboard-data",
+    "dashboard-rest",
+    "dashboard-ui",
 ]
