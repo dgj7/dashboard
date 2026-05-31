@@ -6,22 +6,26 @@
 
     top: 0;
     background-color: rgb(32, 32, 32);
+    text-align: center;
+
+    border-bottom: 4px solid rgb(80, 80, 80);
 }
 
 .sidebar {
     position: absolute;
     left: 0;
-    top: 92px;
+    top: 96px;
     bottom: 0;
-    widtH: 178px;
+    width: 178px;
 
     background-color: rgb(32, 32, 32);
+    border-right: 7px double rgb(80, 80, 80);
 }
 
 .content {
     position: absolute;
-    left: 178px;
-    top: 92px;
+    left: 186px;
+    top: 96px;
     right: 0;
     bottom: 0;
 

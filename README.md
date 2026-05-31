@@ -26,7 +26,7 @@ Frameworks used:
 * [askama](https://askama.rs/en/stable/introduction.html): web templates
 
 Exposed services:
-* `./run.sh`  →  http://127.0.0.1:8000/shrek
+* `./run.sh`  →  http://127.0.0.1:8000/dashboard
 
 ---
 Witty phrase goes here
