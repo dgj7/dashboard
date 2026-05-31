@@ -1,5 +1,6 @@
 #[macro_use] extern crate rocket;
 
+use rocket::fs::FileServer;
 use crate::hello_template::HelloTemplate;
 
 pub mod hello_template;
@@ -11,5 +12,7 @@ fn hello(name: &str) -> HelloTemplate {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![hello])
+    rocket::build()
+        .mount("/", routes![hello])
+        .mount("/static", FileServer::from("static"))
 }
