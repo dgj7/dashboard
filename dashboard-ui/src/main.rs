@@ -1,18 +1,18 @@
 #[macro_use] extern crate rocket;
 
 use rocket::fs::FileServer;
-use crate::hello_template::HelloTemplate;
+use crate::dashboard_template::DashboardTemplate;
 
-pub mod hello_template;
+mod dashboard_template;
 
-#[get("/<name>")]
-fn hello(name: &str) -> HelloTemplate {
-    HelloTemplate { name: name.parse().unwrap() }
+#[get("/dashboard")]
+fn dashboard() -> DashboardTemplate {
+    DashboardTemplate {}
 }
 
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![hello])
+        .mount("/", routes![dashboard])
         .mount("/static", FileServer::from("static"))
 }

@@ -1,0 +1,29 @@
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 92px;
+
+    top: 0;
+    background-color: rgb(32, 32, 32);
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 92px;
+    bottom: 0;
+    widtH: 178px;
+
+    background-color: rgb(32, 32, 32);
+}
+
+.content {
+    position: absolute;
+    left: 178px;
+    top: 92px;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(48, 48, 48);
+}
