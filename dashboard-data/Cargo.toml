@@ -5,3 +5,6 @@ edition = "2024"
 
 [dependencies]
 common = { path = "../common" }
+rusqlite_migration = { version = "2.5.0", features=["from-directory"] }
+include_dir = "0.7"
+rusqlite = {  version="0.40.0", features=["bundled"] }
