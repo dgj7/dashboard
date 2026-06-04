@@ -1,7 +1,8 @@
 use rocket::{launch, routes};
-use crate::liveness::ping;
+use controller::liveness::ping;
 
-mod liveness;
+mod controller;
+mod configuration;
 
 #[launch]
 fn rocket() -> _ {
