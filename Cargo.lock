@@ -175,7 +175,10 @@ checksum = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
 
 [[package]]
 name = "common"
-version = "0.0.2"
+version = "0.0.4"
+dependencies = [
+ "serde",
+]
 
 [[package]]
 name = "cookie"
@@ -190,7 +193,7 @@ dependencies = [
 
 [[package]]
 name = "dashboard-data"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "common",
  "include_dir",
@@ -200,9 +203,11 @@ dependencies = [
 
 [[package]]
 name = "dashboard-rest"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "common",
+ "rocket",
+ "serde",
 ]
 
 [[package]]
@@ -1027,6 +1032,7 @@ dependencies = [
  "rocket_codegen",
  "rocket_http",
  "serde",
+ "serde_json",
  "state",
  "tempfile",
  "time",
