@@ -5,5 +5,5 @@ use rusqlite::Connection;
 use std::sync::{LazyLock, Mutex};
 
 pub static DATABASE: LazyLock<Mutex<Connection>> = LazyLock::new(|| {
-    Mutex::new(Connection::open("apps.db").unwrap())
+    Mutex::new(Connection::open("../apps.db").unwrap())
 });

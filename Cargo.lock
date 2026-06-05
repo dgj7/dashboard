@@ -203,7 +203,7 @@ dependencies = [
 
 [[package]]
 name = "dashboard-rest"
-version = "0.0.6"
+version = "0.0.7"
 dependencies = [
  "common",
  "rocket",
@@ -213,7 +213,7 @@ dependencies = [
 
 [[package]]
 name = "dashboard-ui"
-version = "0.0.6"
+version = "0.0.7"
 dependencies = [
  "askama",
  "common",
