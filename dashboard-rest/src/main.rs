@@ -3,7 +3,7 @@ use controller::liveness::ping;
 use crate::controller::apps::maintainer_apps;
 
 mod controller;
-mod configuration;
+mod data;
 
 #[launch]
 fn rocket() -> _ {

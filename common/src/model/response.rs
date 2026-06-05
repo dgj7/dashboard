@@ -5,9 +5,3 @@ use crate::model::app::Application;
 pub struct Response {
     pub apps: Vec<Application>,
 }
-
-impl Response {
-    pub fn new() -> Self {
-        Self { apps: vec![] }
-    }
-}
