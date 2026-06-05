@@ -1,6 +1,6 @@
 use rocket::{launch, routes};
-use controller::liveness::ping;
-use crate::controller::apps::maintainer_apps;
+use controller::rest_get_liveness::ping;
+use crate::controller::rest_get_apps::maintainer_apps;
 
 mod controller;
 mod data;

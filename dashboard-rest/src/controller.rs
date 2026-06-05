@@ -1,2 +1,2 @@
-pub mod liveness;
-pub mod apps;
+pub mod rest_get_liveness;
+pub mod rest_get_apps;

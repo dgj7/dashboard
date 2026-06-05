@@ -203,12 +203,11 @@ dependencies = [
 
 [[package]]
 name = "dashboard-rest"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "common",
  "rocket",
  "rusqlite",
- "serde",
  "serde_json",
 ]
 
