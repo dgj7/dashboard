@@ -31,7 +31,7 @@ Uses:
 * [askama](https://askama.rs/en/stable/introduction.html): web templates
 
 ## Exposed services
-* rest: `./run-rest` → http://127.0.0.1:8080/maintainer/apps?owner=fronk
+* rest: `./run-rest` →  http://127.0.0.1:8080/maintainer/apps
 * ui: `./run-ui.sh`  →  http://127.0.0.1:8081/dashboard
 
 ---
