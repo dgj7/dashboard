@@ -300,12 +300,15 @@ dependencies = [
 
 [[package]]
 name = "dashboard-ui"
-version = "0.0.8"
+version = "0.0.9"
 dependencies = [
  "askama",
  "common",
  "reqwest",
  "rocket",
+ "tracing",
+ "tracing-core",
+ "tracing-subscriber",
 ]
 
 [[package]]

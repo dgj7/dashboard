@@ -30,6 +30,7 @@ Uses:
 * [rocket](https://rocket.rs/): web service support
 * [askama](https://askama.rs/en/stable/introduction.html): web templates
 * [reqwest](https://docs.rs/reqwest/latest/reqwest/): http client
+* [tracing-subscriber](): beautify logs
 
 ## Exposed services
 * rest: `./run-rest` →  http://127.0.0.1:8080/maintainer/apps

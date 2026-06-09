@@ -1,6 +1,6 @@
 [package]
 name = "dashboard-ui"
-version = "0.0.8"
+version = "0.0.9"
 edition = "2024"
 
 [dependencies]
@@ -8,3 +8,6 @@ common = { path = "../common" }
 askama = "0.16.0"
 rocket = "0.5.1"
 reqwest = { version = "0.13.4", features = ["json"]}
+tracing = "0.1.44"
+tracing-core = "0.1.36"
+tracing-subscriber = "0.3.23"
