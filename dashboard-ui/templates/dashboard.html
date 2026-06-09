@@ -21,8 +21,13 @@
                 </ul>
             </div>
             <div class="content">
+                {% for app in apps %}
+                    <div id="{{ app.app_name }}">{{ app.app_name }}</div>
+                {% endfor %}
+
 
                 <!-- todo: this will need to be commented out, and/or added programmatically for each element returned from rest app -->
+                <!--
                 <div id="app1" class="application">
                     <div class="app-name">app1</div>
                     <div id="app1-dev" class="env up">dev</div>
@@ -41,6 +46,7 @@
                     <div id="app3-uat" class="env up">uat</div>
                     <div id="app3-prd" class="env up">prd</div>
                 </div>
+                -->
             </div>
         </div>
     </body>

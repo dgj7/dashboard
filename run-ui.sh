@@ -1,2 +1,2 @@
 #!/bin/bash
-cargo run --bin dashboard-ui
+(cd dashboard-ui; cargo run)

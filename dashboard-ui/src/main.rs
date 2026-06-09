@@ -1,13 +1,20 @@
 #[macro_use] extern crate rocket;
 
 use rocket::fs::FileServer;
-use crate::dashboard_template::DashboardTemplate;
+use template::dashboard_template::DashboardTemplate;
+use crate::retrieve::retrieve_apps::retrieve_apps;
 
-mod dashboard_template;
+pub mod retrieve;
+pub mod template;
 
 #[get("/dashboard")]
-fn dashboard() -> DashboardTemplate {
-    DashboardTemplate {}
+async fn dashboard() -> DashboardTemplate {
+    let response = retrieve_apps();
+
+    match response.await {
+        Ok(apps) => DashboardTemplate::new(apps),
+        Err(_) => panic!("todo: replace with error template") // todo
+    }
 }
 
 #[launch]
