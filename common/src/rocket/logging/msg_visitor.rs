@@ -1,8 +1,8 @@
 use std::fmt::Debug;
 use tracing_core::Field;
 
-pub(crate) struct MessageVisitor<'a> {
-    pub(crate) message: &'a mut String,
+pub struct MessageVisitor<'a> {
+    pub message: &'a mut String,
 }
 
 impl<'a> tracing::field::Visit for MessageVisitor<'a> {

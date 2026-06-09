@@ -236,9 +236,12 @@ dependencies = [
 
 [[package]]
 name = "common"
-version = "0.0.8"
+version = "0.0.9"
 dependencies = [
  "serde",
+ "tracing",
+ "tracing-core",
+ "tracing-subscriber",
 ]
 
 [[package]]
@@ -290,24 +293,23 @@ dependencies = [
 
 [[package]]
 name = "dashboard-rest"
-version = "0.0.10"
+version = "0.0.11"
 dependencies = [
  "common",
  "rocket",
  "rusqlite",
  "serde_json",
+ "tracing-subscriber",
 ]
 
 [[package]]
 name = "dashboard-ui"
-version = "0.0.9"
+version = "0.0.10"
 dependencies = [
  "askama",
  "common",
  "reqwest",
  "rocket",
- "tracing",
- "tracing-core",
  "tracing-subscriber",
 ]
 

@@ -1,4 +1,8 @@
 use rocket::{launch, routes};
+use tracing_subscriber::fmt;
+use tracing_subscriber::layer::SubscriberExt;
+use tracing_subscriber::util::SubscriberInitExt;
+use common::rocket::logging::log_format::LogFormat;
 use controller::rest_get_liveness::ping;
 use crate::controller::rest_get_apps::maintainer_apps;
 use crate::controller::rest_get_user::current_user;
@@ -9,6 +13,10 @@ pub mod session;
 
 #[launch]
 fn rocket() -> _ {
+    tracing_subscriber::registry()
+        .with(fmt::layer().with_ansi(true).event_format(LogFormat))
+        .init();
+
     rocket::build()
         .mount("/", routes![ping])
         .mount("/", routes![maintainer_apps])

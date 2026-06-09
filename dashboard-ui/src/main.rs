@@ -5,7 +5,7 @@ use tracing_subscriber::fmt;
 use tracing_subscriber::layer::SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
 use template::dashboard_template::DashboardTemplate;
-use crate::cfg::log_format::LogFormat;
+use common::rocket::logging::log_format::LogFormat;
 use crate::retrieve::retrieve_apps::retrieve_apps;
 
 pub mod retrieve;

@@ -3,7 +3,7 @@ use tracing_subscriber::fmt::{FmtContext, FormatEvent, FormatFields};
 use tracing_subscriber::fmt::format::Writer;
 use tracing_subscriber::registry::LookupSpan;
 use std::fmt::Result;
-use crate::cfg::msg_visitor::MessageVisitor;
+use crate::rocket::logging::msg_visitor::MessageVisitor;
 
 pub struct LogFormat;
 
@@ -13,7 +13,7 @@ where
     N: for<'a> FormatFields<'a> + 'static,
 {
     fn format_event(&self,
-                    ctx: &FmtContext<'_, S, N>,
+                    _ctx: &FmtContext<'_, S, N>,
                     mut writer: Writer<'_>,
                     event: &tracing_core::event::Event<'_>
     ) -> Result {
