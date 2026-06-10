@@ -1,5 +1,5 @@
 use rocket::get;
-use common::model::auth::user::CurrentUser;
+use common::auth::user::CurrentUser;
 use crate::session::query_user::determine_current_user;
 
 #[get("/current_user")]

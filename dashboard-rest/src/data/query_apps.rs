@@ -1,6 +1,6 @@
 use std::error::Error;
 use common::model::app::Application;
-use common::model::auth::user::CurrentUser;
+use common::auth::user::CurrentUser;
 use crate::data::DATABASE;
 
 static QUERY_APPS: &str = "select a.id, a.name
