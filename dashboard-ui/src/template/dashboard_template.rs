@@ -22,7 +22,7 @@ impl DashboardTemplate {
     pub fn new(dbr : DashboardResponse) -> Self {
         let mut aa = vec!();
         for dba in dbr.apps {
-            aa.push(AppTemplate::new(dba));
+            aa.push(AppTemplate::new(&dba));
         }
         DashboardTemplate { apps: aa }
     }

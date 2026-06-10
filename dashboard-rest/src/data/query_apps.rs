@@ -13,7 +13,7 @@ pub fn select_apps_by_owner(current_user: &CurrentUser) -> Result<Vec<Applicatio
     let guard = DATABASE.lock()?;
     let mut statement = guard.prepare(QUERY_APPS)?;
     let apps = statement.query_map(&[&current_user.id], |row| {
-        Ok(Application {id: row.get(0)?, name: row.get(1)?, links: vec!()})
+        Ok(Application {id: row.get(0)?, name: row.get(1)?, environments: vec!()})
     })?.collect::<Result<Vec<Application>,_>>()?;
     Ok(apps)
 }

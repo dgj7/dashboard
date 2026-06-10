@@ -22,31 +22,13 @@
             </div>
             <div class="content">
                 {% for app in apps %}
-                    <div id="{{ app.app_name }}">{{ app.app_name }}</div>
+                    <div id="{{ app.app_name }}" class="application">
+                        <div class="app-name">{{ app.app_name }}</div>
+                        {% for env in app.environments %}
+                            <div id="{{ env.dev_id }}" class="env">{{ env.name }}</div>
+                        {% endfor %}
+                    </div>
                 {% endfor %}
-
-
-                <!-- todo: this will need to be commented out, and/or added programmatically for each element returned from rest app -->
-                <!--
-                <div id="app1" class="application">
-                    <div class="app-name">app1</div>
-                    <div id="app1-dev" class="env up">dev</div>
-                    <div id="app1-uat" class="env down">uat</div>
-                    <div id="app1-prd" class="env up">prd</div>
-                </div>
-                <div id="app2" class="application">
-                    <div class="app-name">app2</div>
-                    <div id="app2-dev" class="env up">dev</div>
-                    <div id="app2-uat" class="env up">uat</div>
-                    <div id="app2-prd" class="env up">prd</div>
-                </div>
-                <div id="app3" class="application">
-                    <div class="app-name">app3</div>
-                    <div id="app3-dev" class="env up">dev</div>
-                    <div id="app3-uat" class="env up">uat</div>
-                    <div id="app3-prd" class="env up">prd</div>
-                </div>
-                -->
             </div>
         </div>
     </body>

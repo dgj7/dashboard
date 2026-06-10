@@ -1,9 +1,9 @@
 use serde::{Deserialize, Serialize};
-use crate::model::link::Link;
+use crate::model::environment::Environment;
 
 #[derive(Serialize,Deserialize)]
 pub struct Application {
     pub id: u32,
     pub name: String,
-    pub links: Vec<Link>,
+    pub environments: Vec<Environment>,
 }

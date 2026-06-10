@@ -264,7 +264,7 @@ dependencies = [
 
 [[package]]
 name = "common"
-version = "0.0.11"
+version = "0.0.12"
 dependencies = [
  "chrono",
  "owo-colors",
@@ -313,9 +313,8 @@ checksum = "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
 
 [[package]]
 name = "dashboard-data"
-version = "0.0.3"
+version = "0.0.4"
 dependencies = [
- "common",
  "include_dir",
  "rusqlite",
  "rusqlite_migration",
@@ -323,7 +322,7 @@ dependencies = [
 
 [[package]]
 name = "dashboard-rest"
-version = "0.0.12"
+version = "0.0.13"
 dependencies = [
  "common",
  "rocket",
@@ -334,7 +333,7 @@ dependencies = [
 
 [[package]]
 name = "dashboard-ui"
-version = "0.0.11"
+version = "0.0.12"
 dependencies = [
  "askama",
  "common",
