@@ -26,12 +26,12 @@
                     <div id="{{ app.name }}" class="application">
                         <div class="app-name">{{ app.name }}</div>
                         {% for env in app.environments %}
-                            <div id="{{ env.name }}_{{ app.name }}" class="env" onclick="toggleVisibility('links_{{ env.name }}_{{ app.name }}')">
-                                {{ env.name }}<br/>
+                            <div id="{{ env.name }}_{{ app.name }}" class="env">
+                                <div id="name_{{ env.name }}_{{ app.name }}" class="env-name" onclick="toggleVisibility('links_{{ env.name }}_{{ app.name }}')">{{ env.name }}</div>
                                 <div id="links_{{ env.name }}_{{ app.name }}" class="links" style="display:none">
-                                    first<br/>
-                                    second<br/>
-                                    third
+                                    {% for link in env.links %}
+                                        <a href="{{ link.url }}" target="_blank">{{ link.link_type }}</a>
+                                    {% endfor %}
                                 </div>
                             </div>
                         {% endfor %}
