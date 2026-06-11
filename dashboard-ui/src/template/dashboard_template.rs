@@ -2,13 +2,13 @@ use askama::Template;
 use rocket::http::Status;
 use rocket::response::{content, Responder};
 use rocket::{response, Request};
+use common::model::app::Application;
 use common::model::response::DashboardResponse;
-use crate::template::app_template::AppTemplate;
 
 #[derive(Template)]
 #[template(path = "dashboard.html")]
 pub(crate) struct DashboardTemplate {
-    pub apps: Vec<AppTemplate>,
+    pub apps: Vec<Application>,
 }
 
 impl<'r> Responder<'r, 'static> for DashboardTemplate {
@@ -19,11 +19,7 @@ impl<'r> Responder<'r, 'static> for DashboardTemplate {
 }
 
 impl DashboardTemplate {
-    pub fn new(dbr : DashboardResponse) -> Self {
-        let mut aa = vec!();
-        for dba in dbr.apps {
-            aa.push(AppTemplate::new(&dba));
-        }
-        DashboardTemplate { apps: aa }
+    pub fn new(dashboard_response: DashboardResponse) -> Self {
+        DashboardTemplate { apps: dashboard_response.apps }
     }
 }

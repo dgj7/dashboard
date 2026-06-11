@@ -22,10 +22,10 @@
             </div>
             <div class="content">
                 {% for app in apps %}
-                    <div id="{{ app.app_name }}" class="application">
-                        <div class="app-name">{{ app.app_name }}</div>
+                    <div id="{{ app.name }}" class="application">
+                        <div class="app-name">{{ app.name }}</div>
                         {% for env in app.environments %}
-                            <div id="{{ env.dev_id }}" class="env">{{ env.name }}</div>
+                            <div id="{{ env.name }}_{{ app.name }}" class="env">{{ env.name }}</div>
                         {% endfor %}
                     </div>
                 {% endfor %}
