@@ -33,8 +33,12 @@ Uses:
 * [tracing-subscriber](): beautify logs
 
 ## Exposed services
-* rest: `./run-rest` →  http://127.0.0.1:8080/maintainer/apps
-* ui: `./run-ui.sh`  →  http://127.0.0.1:8081/dashboard
+* rest: `./run-rest`
+  * http://127.0.0.1:8080/maintainer/apps
+  * http://127.0.0.1:8080/version
+* ui: `./run-ui.sh`
+  * http://127.0.0.1:8081/dashboard
+  * http://127.0.0.1:8081/version
 
 ---
 Witty phrase goes here

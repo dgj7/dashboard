@@ -6,11 +6,13 @@ use tracing_subscriber::layer::SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
 use template::dashboard_template::DashboardTemplate;
 use common::rocket::logging::log_format::LogFormat;
+use crate::controller::rest_get_version::version;
 use crate::retrieve::retrieve_apps::retrieve_apps;
 
 pub mod retrieve;
 pub mod template;
 pub mod cfg;
+pub mod controller;
 
 #[get("/dashboard")]
 async fn dashboard() -> DashboardTemplate {
@@ -31,4 +33,5 @@ fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![dashboard])
         .mount("/static", FileServer::from("static"))
+        .mount("/", routes![version])
 }

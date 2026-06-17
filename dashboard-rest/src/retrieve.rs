@@ -1,2 +1,1 @@
-pub mod retrieve_apps;
 pub mod retrieve_version;
