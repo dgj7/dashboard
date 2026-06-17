@@ -2,4 +2,4 @@
 Shared resources for the dashboard workspace.
 
 ---
-[Go Back](..)
+[Go Back](../README.md)

@@ -7,4 +7,4 @@ Simple terminal program to generate/update the database.
 * [include_dir](https://docs.rs/include_dir/latest/include_dir/): supports rusqlite migration by importing an entire directory containing ddl migrations
 
 ---
-[Go Back](..)
+[Go Back](../README.md)
