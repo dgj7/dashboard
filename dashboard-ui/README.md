@@ -8,4 +8,4 @@ Display a simple web ui containing status of all applications
 * [tracing-subscriber](): beautify logs
 
 ---
-[Go Back](../README.md)
+[Go Back](https://github.com/dgj7/dashboard/tree/main)

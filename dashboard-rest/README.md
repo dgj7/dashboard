@@ -7,4 +7,4 @@ REST api for access to database.
 * [serde_json](https://docs.rs/serde_json/latest/serde_json/): return data as json
 
 ---
-[Go Back](../README.md)
+[Go Back](https://github.com/dgj7/dashboard/tree/main)
