@@ -27,7 +27,10 @@
                         <div class="app-name">{{ app.name }}</div>
                         {% for env in app.environments %}
                             <div id="{{ env.name }}_{{ app.name }}" class="env">
-                                <div id="name_{{ env.name }}_{{ app.name }}" class="env-name" onclick="toggleVisibility('links_{{ env.name }}_{{ app.name }}')">{{ env.name }}</div>
+                                <div id="name_{{ env.name }}_{{ app.name }}" class="env-name" onclick="toggleVisibility('links_{{ env.name }}_{{ app.name }}')">
+                                    {{ env.name }}&nbsp;&nbsp;
+                                    <div class="status unknown">&#10227;</div>
+                                </div>
                                 <div id="links_{{ env.name }}_{{ app.name }}" class="links" style="display:none">
                                     {% for link in env.links %}
                                         <a href="{{ link.url }}" target="_blank">{{ link.link_type }}</a>
