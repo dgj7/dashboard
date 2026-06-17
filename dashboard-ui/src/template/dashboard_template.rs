@@ -7,7 +7,7 @@ use common::model::response::DashboardResponse;
 
 #[derive(Template)]
 #[template(path = "dashboard.html")]
-pub(crate) struct DashboardTemplate {
+pub struct DashboardTemplate {
     pub apps: Vec<Application>,
 }
 
