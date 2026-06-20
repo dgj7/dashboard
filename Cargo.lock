@@ -264,11 +264,12 @@ dependencies = [
 
 [[package]]
 name = "common"
-version = "0.0.13"
+version = "0.0.14"
 dependencies = [
  "chrono",
  "owo-colors",
  "serde",
+ "serde_millis",
  "tracing",
  "tracing-core",
  "tracing-subscriber",
@@ -322,7 +323,7 @@ dependencies = [
 
 [[package]]
 name = "dashboard-rest"
-version = "0.0.14"
+version = "0.0.15"
 dependencies = [
  "common",
  "rocket",
@@ -333,7 +334,7 @@ dependencies = [
 
 [[package]]
 name = "dashboard-ui"
-version = "0.0.21"
+version = "0.0.22"
 dependencies = [
  "askama",
  "common",
@@ -1987,6 +1988,15 @@ dependencies = [
  "serde",
  "serde_core",
  "zmij",
+]
+
+[[package]]
+name = "serde_millis"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e6e2dc780ca5ee2c369d1d01d100270203c4ff923d2a4264812d723766434d00"
+dependencies = [
+ "serde",
 ]
 
 [[package]]

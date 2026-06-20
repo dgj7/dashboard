@@ -1,6 +1,6 @@
 [package]
 name = "common"
-version = "0.0.13"
+version = "0.0.14"
 edition = "2024"
 
 [dependencies]
@@ -10,3 +10,4 @@ tracing-core = "0.1.36"
 tracing-subscriber = "0.3.23"
 chrono = "0.4.45"
 owo-colors = "4.3.0"
+serde_millis = "0.1.1"

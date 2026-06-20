@@ -1,5 +1,6 @@
 #[macro_use] extern crate rocket;
 
+use std::time::Instant;
 use crate::controller::html_get_dashboard::dashboard;
 use crate::controller::rest_get_version::version;
 use common::rocket::logging::log_format::LogFormat;
@@ -7,6 +8,7 @@ use rocket::fs::FileServer;
 use tracing_subscriber::fmt;
 use tracing_subscriber::layer::SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
+use common::rocket::uptime::UptimeTracker;
 use crate::controller::rest_get_liveness::ping;
 
 pub mod retrieve;
@@ -23,6 +25,7 @@ fn rocket() -> _ {
         .init();
 
     rocket::build()
+        .manage(UptimeTracker { started: Instant::now() })
         .mount("/", routes![dashboard])
         .mount("/static", FileServer::from("static"))
         .mount("/", routes![version])
