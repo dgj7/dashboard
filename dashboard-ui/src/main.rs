@@ -7,6 +7,7 @@ use rocket::fs::FileServer;
 use tracing_subscriber::fmt;
 use tracing_subscriber::layer::SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
+use crate::controller::rest_get_liveness::ping;
 
 pub mod retrieve;
 pub mod template;
@@ -25,4 +26,5 @@ fn rocket() -> _ {
         .mount("/", routes![dashboard])
         .mount("/static", FileServer::from("static"))
         .mount("/", routes![version])
+        .mount("/", routes![ping])
 }
