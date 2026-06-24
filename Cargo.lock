@@ -264,7 +264,7 @@ dependencies = [
 
 [[package]]
 name = "common"
-version = "0.0.14"
+version = "0.0.15"
 dependencies = [
  "chrono",
  "owo-colors",
@@ -323,9 +323,10 @@ dependencies = [
 
 [[package]]
 name = "dashboard-rest"
-version = "0.0.15"
+version = "0.0.16"
 dependencies = [
  "common",
+ "reqwest",
  "rocket",
  "rusqlite",
  "serde_json",
@@ -334,7 +335,7 @@ dependencies = [
 
 [[package]]
 name = "dashboard-ui"
-version = "0.0.22"
+version = "0.0.23"
 dependencies = [
  "askama",
  "common",

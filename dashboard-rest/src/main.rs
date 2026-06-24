@@ -7,6 +7,7 @@ use common::rocket::logging::log_format::LogFormat;
 use common::rocket::uptime::UptimeTracker;
 use controller::rest_get_liveness::ping;
 use crate::controller::rest_get_apps::maintainer_apps;
+use crate::controller::rest_get_service_status::service;
 use crate::controller::rest_get_user::current_user;
 use crate::controller::rest_get_version::version;
 
@@ -27,4 +28,5 @@ fn rocket() -> _ {
         .mount("/", routes![maintainer_apps])
         .mount("/", routes![current_user])
         .mount("/", routes![version])
+        .mount("/", routes![service])
 }

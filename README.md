@@ -13,6 +13,7 @@ This project workspace consists of 4 projects:
   * http://127.0.0.1:8080/maintainer/apps
   * http://127.0.0.1:8080/version
   * http://127.0.0.1:8080/ping
+  * http://127.0.0.1:8080/service?name=java-hello&env=dev
 * ui: `./run-ui.sh`
   * http://127.0.0.1:8081/dashboard
   * http://127.0.0.1:8081/version

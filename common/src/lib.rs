@@ -3,3 +3,4 @@ pub mod rocket;
 pub mod auth;
 pub mod info;
 pub mod health;
+pub mod status;

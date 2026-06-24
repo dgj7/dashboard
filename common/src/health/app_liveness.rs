@@ -2,7 +2,7 @@ use std::time::Instant;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize,Deserialize)]
-pub enum ApplicationState {
+pub enum ApplicationLiveness {
     Up {
         #[serde(with = "serde_millis")]
         started: Instant,
