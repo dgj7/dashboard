@@ -10,4 +10,5 @@ pub enum ServiceStatusType {
 #[derive(Serialize,Deserialize)]
 pub struct ServiceStatus {
     pub status: ServiceStatusType,
+    pub message: String,
 }
